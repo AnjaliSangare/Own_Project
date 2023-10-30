@@ -40,7 +40,7 @@ loadSongs();
 function playAudio() {
     audio.play();
     playPauseBtn.querySelector('i.fas').classList.remove('fa-play');
-    playPauseBtn.querySelector('i.fas').classList.remove('fa-pause');
+    playPauseBtn.querySelector('i.fas').classList.add('fa-pause');
     isPlaying = true;
     record.classList.add('record-animation');
 
@@ -50,7 +50,7 @@ function playAudio() {
 function pauseAudio() {
     audio.play();
     playPauseBtn.querySelector('i.fas').classList.remove('fa-pause');
-    playPauseBtn.querySelector('i.fas').classList.remove('fa-play');
+    playPauseBtn.querySelector('i.fas').classList.add('fa-play');
     isPlaying = false;
     record.classList.remove('record-animation');
 }
@@ -91,7 +91,7 @@ pervBtn.addEventListener('click', function () {
     previousSong();
 }, false);
 
-songList.addEventListener('click',function(){
+songList.addEventListener('click',function(e){
     songIndex=e.target.closest('li').getAttribute('data-index');
     loadAudio();
     playAudio();
@@ -104,6 +104,6 @@ audio.addEventListener('ended',function()
     nextSong();
 });
 
-volSlider.addEventListener('click',function(){
+volSlider.addEventListener('input',function(){
     audio.volume=volSlider.value/100;
 },false);
