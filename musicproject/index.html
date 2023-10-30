@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/71fe31a0f4.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <div class="player">
+                <img src="Images/images.jpeg" alt="Record" class="record">
+               <h2 id="title">Song Name</h2>
+               <div class="slidecontainer">
+                  <i class="fas fa-volume-down"></i>
+                   <input type="range" min="0" max="100" value="50" class="slider">
+                  <i class="fas fa-volume-up"></i>
+               </div>
+                <div class="controls">
+                      <button class="previous" id="previous">
+                        <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play-pause" id="play-pause">
+                        <i class="fas fa-play"></i>
+                      </button>
+                      <button class="next" id="next">
+                        <i class="fas fa-step-forward"></i>
+                      </button>
+                </div>
+            </div>
+            <div class="playlist">
+                <h2>Playlist</h2>
+                 <ul class="song-list">
+                    <li data-src="Music/Oonchi-Oonchi-Deewarein.mp3" data-name="Oonchi-Oonchi-Deewarein" data-index="0"><span>Oonchi-Oonchi-Deewarein</span><span>04:14</span></li>
+                    <li data-src="Music/Heeriye.mp3" data-name="Heeriye" data-index="1"><span>Heeriye</span><span>03:19</span></li>
+                    <li data-src="Music/Kesariya.mp3" data-name="Kesariya" data-index="2"><span>Kesariya</span><span>04:28</span></li>
+                    <li data-src="Music/Maan Meri Jaan.mp3" data-name="Maan Meri Jaan" data-index="3"><span>Maan Meri Jaan</span><span>03:14</span></li>
+                    <li data-src="Music/Malang Sajna.mp3" data-name="Malang Sajna" data-index="4"><span>Malang Sajna</span><span>02:37</span></li>
+                    <li data-src="Music/Raatan Lambiyan.mp3" data-name="Raatan Lambiyan" data-index="5"><span>Raatan Lambiyan</span><span>03:50</span></li>
+                    <li data-src="Music/Tu Hai To Mujhe Phir Aur Kya Chahiye.mp3" data-name="Tu Hai To Mujhe Phir Aur Kya Chahiye" data-index="6"><span>Tu Hai To Mujhe Phir Aur Kya Chahiye</span><span>04:26</span></li>
+
+                 </ul>
+                 <audio src="" id="audio"></audio>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
